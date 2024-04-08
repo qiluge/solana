@@ -950,7 +950,7 @@ impl RpcClient {
         let preflight_commitment = CommitmentConfig {
             commitment: config.preflight_commitment.unwrap_or_default(),
         };
-        let preflight_commitment = self.maybe_map_commitment(preflight_commitment).await?;
+        // let preflight_commitment = self.maybe_map_commitment(preflight_commitment).await?;
         let config = RpcSendTransactionConfig {
             encoding: Some(encoding),
             preflight_commitment: Some(preflight_commitment.commitment),
